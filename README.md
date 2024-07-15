@@ -42,7 +42,7 @@ This project is a simple web-based To-Do List application built using HTML, CSS,
 Clone the repository:
 
 ```bash
-git clone 
+git clone https://github.com/Sanmathi-Sethupathi/to-do-list.git
 ```
 
 Open `index.html` in your web browser to use the application.
