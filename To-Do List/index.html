@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+        /* Additional custom styles */
+        .table-responsive {
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+
+        /* Optional: Adjust padding and margins as needed */
+        .container {
+            padding: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h2>Menu</h2>
+            <div class="tasks">
+                <h3>Tasks</h3>
+                <ul>
+                    <li><i class="fas fa-calendar-day"></i> Today</li>
+                    <li id="calendar"><i class="fas fa-calendar"></i> Calendar</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="lists">
+                <h3>Lists</h3>
+                <ul>
+                    <li id="personal-list" class="personal"><i class="fas fa-user"></i> Personal</li>
+                    <li id="work-list" class="work"><i class="fas fa-briefcase"></i> Work</li>
+                    <li id="all-list"><i class="fas fa-list"></i> All</li>
+                </ul>
+                <div>
+                    <button id="add-list"><i class="fas fa-plus"></i> Add New List</button>
+                </div>
+            </div>                        
+        </div>
+        <div class="main-content">
+            <h1><span id="selected-list"></span></h1>
+            <div class="table-responsive">
+                <table class="table tasks-table">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Description</th>
+                            <th>List</th>
+                            <th>Due Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tasks-list">
+                        <!-- Tasks will be displayed here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="task-details" style="width: auto;background-color: rgb(250, 246, 242);">
+            <h2>Task:</h2>
+            <input type="text" id="task-name" placeholder="Task Name" required>
+            <textarea id="task-description" placeholder="Description" required></textarea>
+            <div class="details">
+                <label for="list">List:</label>
+                <select id="task-list">
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                </select>
+                <label for="due-date">Due date:</label>
+                <input type="date" id="due-date">
+            </div>
+            <div class="actions">
+                <button id="delete-task">Delete Task</button>
+                <button id="save-task">Save changes</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
